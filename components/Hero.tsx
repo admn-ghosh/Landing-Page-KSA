@@ -21,10 +21,20 @@ const Hero: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    // Directly update form data with the selected value from the dropdown
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -219,7 +229,7 @@ const Hero: React.FC = () => {
                       required
                       name="projectCity"
                       value={formData.projectCity}
-                      onChange={handleChange}
+                      onChange={handleSelectChange}
                       className="w-full rounded border-stone-300 shadow-sm focus:border-emerald-600 focus:ring-emerald-600 p-3 border bg-white text-stone-900 text-base"
                     >
                       <option value="">{t.hero.labels.selectCity}</option>
@@ -236,7 +246,7 @@ const Hero: React.FC = () => {
                       required
                       name="panelType"
                       value={formData.panelType}
-                      onChange={handleChange}
+                      onChange={handleSelectChange}
                       className="w-full rounded border-stone-300 shadow-sm focus:border-emerald-600 focus:ring-emerald-600 p-3 border bg-white text-stone-900 text-base"
                     >
                       <option value="">{t.hero.labels.selectPanel}</option>

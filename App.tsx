@@ -10,7 +10,7 @@ import ProjectGallery from './components/ProjectGallery';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import StickyCTA from './components/StickyCTA';
+import WhatsAppCTA from './components/WhatsAppCTA'; // Import the new component
 import { LanguageProvider } from './contexts/LanguageContext';
 
 function AppContent() {
@@ -29,7 +29,7 @@ function AppContent() {
         <FAQ />
       </main>
       <Footer />
-      <StickyCTA />
+      <WhatsAppCTA /> {/* Add the new component here */}
     </div>
   );
 }
