@@ -32,28 +32,19 @@ const Hero: React.FC = () => {
     setErrorMsg(null);
     
     try {
-      // 1. Save to Firebase Firestore
-      // We use a collection named 'mail' because the "Trigger Email" extension 
-      // listens to this collection by default to send emails.
+      // 1. Save to Firebase Firestore in the 'enquiries' collection
+      await addDoc(collection(db, "enquiries"), {
+        ...formData,
+        createdAt: serverTimestamp(),
+        language: language,
+      });
+
+      // 2. Trigger the email extension by writing to the 'mail' collection
       await addDoc(collection(db, "mail"), {
-        // Recipient configuration for the Email Extension
         to: ['parimal@ghoshgroups.com'],
         cc: ['admin@ghoshgroups.com'],
         message: {
           subject: `New KSA Lead: ${formData.companyName}`,
-          text: `
-            New Enquiry from Saudi Arabia Landing Page
-            
-            Name: ${formData.fullName}
-            Company: ${formData.companyName}
-            Email: ${formData.email}
-            Mobile: ${formData.mobile}
-            City: ${formData.projectCity}
-            Panel Type: ${formData.panelType}
-            
-            Requirement:
-            ${formData.areaQuantity}
-          `,
           html: `
             <h2>New Enquiry from Saudi Arabia Landing Page</h2>
             <p><strong>Name:</strong> ${formData.fullName}</p>
@@ -64,18 +55,11 @@ const Hero: React.FC = () => {
             <p><strong>Panel Type:</strong> ${formData.panelType}</p>
             <hr />
             <p><strong>Requirement:</strong><br/>${formData.areaQuantity}</p>
-          `
+          `,
         },
-        // Store raw data for analytics/CRM
-        leadData: {
-            ...formData,
-            source: 'KSA_PPC_Landing_Page',
-            language: language,
-            createdAt: serverTimestamp()
-        }
       });
 
-      // 2. Success UI
+      // 3. Success UI
       setIsSubmitting(false);
       setSubmitted(true);
       
@@ -92,6 +76,11 @@ const Hero: React.FC = () => {
             areaQuantity: ''
         });
       }, 5000);
+
+            // 4. Redirect to thank you page after delay
+            setTimeout(() => {
+              window.location.href = 'https://ghoshgroups.com/thank-you/';
+            }, 2000); // 2 second delay after form reset
 
     } catch (error) {
       console.error("Error adding document: ", error);

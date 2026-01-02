@@ -1,15 +1,16 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
+// TODO: Replace the following with your project's Firebase config
+// See: https://firebase.google.com/docs/web/setup#config-object
 const firebaseConfig = {
-  apiKey: "AIzaSyD-YOUR_API_KEY_HERE",
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef"
+  apiKey: "AIzaSyDldqzqAxxj_4uyYQk3udEUtdt60s0y0xs",
+  authDomain: "helpful-topic-482712-p8.firebaseapp.com",
+  projectId: "helpful-topic-482712-p8",
+  storageBucket: "helpful-topic-482712-p8.firebasestorage.app",
+  messagingSenderId: "427548918732",
+  appId: "1:427548918732:web:94fe39ac8c21a65f841369",
+  measurementId: "G-GEFMR1M26B"
 };
 
 // Initialize Firebase

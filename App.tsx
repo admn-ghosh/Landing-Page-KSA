@@ -21,10 +21,10 @@ function AppContent() {
       <main>
         <Hero />
         <Features />
+        <ProjectGallery />
         <Certifications />
         <ProductSection />
         <ProjectsDelivery />
-        <ProjectGallery />
         <Testimonials />
         <FAQ />
       </main>

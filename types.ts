@@ -33,3 +33,12 @@ export interface FormData {
   panelType: string;
   areaQuantity: string;
 }
+
+// Enhanced interface for Firestore database storage
+export interface KSALeadSubmission extends FormData {
+  language: 'en' | 'ar';
+  submissionStatus?: 'pending' | 'sent_to_sheets' | 'error';
+  submittedAt?: Date | null;
+  syncedAt?: Date | null;
+  errorMessage?: string;
+}

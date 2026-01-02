@@ -9,18 +9,11 @@ const Header: React.FC = () => {
           <a href="/" className="block">
             {/* Using a specific URL for the white logo. */}
             <img 
-              src="https://ghoshgroups.com/wp-content/uploads/2023/11/Ghosh-Group-Logo-White.png" 
+              src="/images/logo.png" 
               alt="Ghosh Group" 
+              width="150"
+              height="56"
               className="h-10 md:h-14 w-auto object-contain"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                if (e.currentTarget.parentElement) {
-                    const fallback = document.createElement('span');
-                    fallback.textContent = 'Ghosh Group';
-                    fallback.className = 'text-2xl font-bold text-white tracking-tight';
-                    e.currentTarget.parentElement.appendChild(fallback);
-                }
-              }}
             />
           </a>
           <LanguageToggle />

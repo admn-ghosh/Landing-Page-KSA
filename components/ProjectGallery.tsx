@@ -11,40 +11,40 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: "Industrial Delivery",
-    description: "2,500 m² PIR roof panels - Industrial delivery",
-    alt: "Sandwich panel delivery across GCC - Industrial PIR Roof",
-    imageSrc: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" 
+    title: "Corrugated Sandwich Panel",
+    description: "Sandwich panel delivery across GCC - Corrugated Sandwich Panel",
+    alt: "Sandwich panel delivery across GCC - Corrugated Sandwich Panel",
+    imageSrc: "https://ghoshgroups.com/wp-content/uploads/2019/03/Corrugated-Sandwich-panel-supplier-dubai-1.jpg" 
   },
   {
-    title: "Commercial Delivery",
-    description: "1,800 m² Rockwool wall system - Commercial delivery",
-    alt: "Sandwich panel delivery across GCC - Commercial Rockwool Wall",
-    imageSrc: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+    title: "Roof Sandwich Panel",
+    description: "Roof Sandwich Panel - Commercial delivery",
+    alt: "Sandwich panel delivery across GCC - Roof Sandwich Panel",
+    imageSrc: "https://ghoshgroups.com/wp-content/uploads/2019/03/sandwich-panel-roof-supplier-uae.jpg"
   },
   {
-    title: "Mixed System Delivery",
-    description: "3,200 m² mixed panel system - Mixed delivery",
-    alt: "Sandwich panel delivery across GCC - Mixed System",
-    imageSrc: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80"
+    title: "Insulated Roof Panel",
+    description: "Door Step Delivery - All over KSA",
+    alt: "Sandwich panel delivery across GCC - Insulated Roof Panel",
+    imageSrc: "https://ghoshgroups.com/wp-content/uploads/2019/03/insulated-roof-panel-supplier-uae.jpg"
   },
   {
-    title: "Industrial Roof Delivery",
-    description: "1,500 m² PUR roof system - Industrial delivery",
-    alt: "Sandwich panel delivery across GCC - Industrial PUR Roof",
-    imageSrc: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80"
+    title: "Flat Sandwich Panel",
+    description: "Production Stock Ready - Available for prompt delivery",
+    alt: "Sandwich panel delivery across GCC - Flat Sandwich Panel",
+    imageSrc: "https://ghoshgroups.com/wp-content/uploads/2019/03/flat-sandwich-panel-supplier-uae.jpg"
   },
   {
-    title: "Storage Facility Delivery",
-    description: "2,100 m² PIR system - Storage facility delivery",
-    alt: "Sandwich panel delivery across GCC - Storage PIR System",
-    imageSrc: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+    title: "Aluminum Sandwich Panel",
+    description: "Quality Aluminum Sandwich Panel - Customised as per your project",
+    alt: "Sandwich panel delivery across GCC - Aluminum Sandwich Panel",
+    imageSrc: "https://ghoshgroups.com/wp-content/uploads/2019/03/aluminum-sandwich-panel-supplier-dubai.jpg"
   },
   {
-    title: "Commercial Wall Delivery",
-    description: "1,600 m² wall panels - Commercial delivery",
-    alt: "Sandwich panel delivery across GCC - Commercial Wall Panels",
-    imageSrc: "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?auto=format&fit=crop&w=1200&q=80"
+    title: "Top Sandwich Panel Supplier",
+    description: "Sandwich Panel Supplier - For all types of project in Saudi Arabia",
+    alt: "Sandwich panel delivery across GCC - Top Sandwich Panel Supplier",
+    imageSrc: "https://ghoshgroups.com/wp-content/uploads/2018/03/puf-insulated-panels-suppliers.jpg"
   }
 ];
 
